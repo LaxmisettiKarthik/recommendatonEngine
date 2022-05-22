@@ -69,8 +69,7 @@ class MatrixFactorization(torch.nn.Module):
 
     def predict(self, user, item):
         return self.forward(user, item)
-
-    def recommend(self):
+    '''def recommend(self):
         import re
         kw = input("Enter the keywords: ")
         for cluster in range(100):
