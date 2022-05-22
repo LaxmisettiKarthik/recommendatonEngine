@@ -229,7 +229,7 @@ with open('model_pkl', 'rb') as files:
 
 #import pickle
 #import numpy as np
-import movierec
+import app
 #from torch.nn import MatrixFactorization
 #model = torch.load('model/pytorch_resnet50.pth',map_location ='cpu')
 #from movierec import kmeans, train_set, ratings_df, movie_names
