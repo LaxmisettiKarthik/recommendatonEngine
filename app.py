@@ -295,7 +295,7 @@ def recommend():
                 break
 
 
-    return (str1)
+    return jsonify({'movies':str1})
 
 
 
