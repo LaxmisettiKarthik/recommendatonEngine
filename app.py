@@ -295,7 +295,7 @@ def recommend():
                 break
 
 
-    return jsonify(str1)
+    return (str1)
 
 
 
