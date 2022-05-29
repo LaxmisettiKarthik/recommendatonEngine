@@ -113,32 +113,6 @@ class MatrixFactorization(torch.nn.Module):
 
 
 
-    '''def recommend(self):
-        import re
-        kw = input("Enter the keywords: ")
-        for cluster in range(100):
-            movs = []
-            recs = []
-            for movidx in np.where(kmeans.labels_ == cluster)[0]:
-                movid = train_set.idx2movieid[movidx]
-                rat_count = ratings_df.loc[ratings_df['movieId'] == movid].count()[0]
-                movs.append((movie_names[movid], rat_count))
-            for mov in sorted(movs, key=lambda tup: tup[1], reverse=True)[:10]:
-                recs.append(mov[0])
-            for r in recs:
-                flag = 0
-                if (re.search(kw, r, re.IGNORECASE)):
-                    flag = 1
-                    print("The selected movie is " + r)
-                    recs.remove(r)
-                    print("You might also want to watch: ")
-                    for m in recs:
-                        print(m)
-                    recs.append(r)
-                    if (flag == 1):
-                        break'''
-
-
 # Creating the dataloader (necessary for PyTorch)
 from torch.utils.data.dataset import Dataset
 from torch.utils.data import DataLoader  # package that helps transform your data to machine learning readiness
@@ -283,10 +257,10 @@ def recommend():
             if (re.search(movie_name, r, re.IGNORECASE)):
                 flag = 1
                 print("The selected movie is " + r)
-                str1 += "The selected movie is " + r + '\n'
+                str1 += "The selected movie is :"+'\n'+'\n' + r + '\n'+'\n'
                 recs.remove(r)
                 print("You might also want to watch: ")
-                str1 += "You might also want to watch: " + '\n'
+                str1 += "You might also want to watch : " + '\n'+'\n'
                 for m in recs:
                     print(m)
                     str1 += m + '\n'
