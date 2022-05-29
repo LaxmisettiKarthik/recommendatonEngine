@@ -263,7 +263,7 @@ def recommend():
                 str1 += "You might also want to watch : " + '\n'+'\n'
                 for m in recs:
                     print(m)
-                    str1 += m +  '\n'
+                    str1 += m + '\n'
                 recs.append(r)
             if (flag == 1):
                 break
